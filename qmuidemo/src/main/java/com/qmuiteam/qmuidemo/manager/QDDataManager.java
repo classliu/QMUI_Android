@@ -11,6 +11,7 @@ import com.qmuiteam.qmuidemo.fragment.components.QDGroupListViewFragment;
 import com.qmuiteam.qmuidemo.fragment.components.QDLayoutFragment;
 import com.qmuiteam.qmuidemo.fragment.components.QDLinkTextViewFragment;
 import com.qmuiteam.qmuidemo.fragment.components.QDPopupFragment;
+import com.qmuiteam.qmuidemo.fragment.components.QDPriorityLinearLayoutFragment;
 import com.qmuiteam.qmuidemo.fragment.components.QDProgressBarFragment;
 import com.qmuiteam.qmuidemo.fragment.components.QDPullRefreshFragment;
 import com.qmuiteam.qmuidemo.fragment.components.QDRadiusImageViewFragment;
@@ -26,6 +27,7 @@ import com.qmuiteam.qmuidemo.fragment.lab.QDSnapHelperFragment;
 import com.qmuiteam.qmuidemo.fragment.util.QDColorHelperFragment;
 import com.qmuiteam.qmuidemo.fragment.util.QDDeviceHelperFragment;
 import com.qmuiteam.qmuidemo.fragment.util.QDDrawableHelperFragment;
+import com.qmuiteam.qmuidemo.fragment.util.QDNotchHelperFragment;
 import com.qmuiteam.qmuidemo.fragment.util.QDSpanFragment;
 import com.qmuiteam.qmuidemo.fragment.util.QDStatusBarHelperFragment;
 import com.qmuiteam.qmuidemo.fragment.util.QDViewHelperFragment;
@@ -87,6 +89,7 @@ public class QDDataManager {
         mComponentsNames.add(QDCollapsingTopBarLayoutFragment.class);
         mComponentsNames.add(QDViewPagerFragment.class);
         mComponentsNames.add(QDLayoutFragment.class);
+        mComponentsNames.add(QDPriorityLinearLayoutFragment.class);
     }
 
     /**
@@ -99,6 +102,7 @@ public class QDDataManager {
         mUtilNames.add(QDDrawableHelperFragment.class);
         mUtilNames.add(QDStatusBarHelperFragment.class);
         mUtilNames.add(QDViewHelperFragment.class);
+        mUtilNames.add(QDNotchHelperFragment.class);
     }
 
     /**

@@ -5,16 +5,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
-import com.qmuiteam.qmui.widget.QMUITopBar;
+import com.qmuiteam.qmui.widget.QMUITopBarLayout;
 import com.qmuiteam.qmui.widget.dialog.QMUITipDialog;
 import com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView;
-import com.qmuiteam.qmuidemo.manager.QDDataManager;
-import com.qmuiteam.qmuidemo.activity.TranslucentActivity;
-import com.qmuiteam.qmuidemo.model.QDItemDescription;
 import com.qmuiteam.qmuidemo.R;
+import com.qmuiteam.qmuidemo.activity.TranslucentActivity;
 import com.qmuiteam.qmuidemo.base.BaseFragment;
 import com.qmuiteam.qmuidemo.lib.Group;
 import com.qmuiteam.qmuidemo.lib.annotation.Widget;
+import com.qmuiteam.qmuidemo.manager.QDDataManager;
+import com.qmuiteam.qmuidemo.model.QDItemDescription;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -27,8 +27,10 @@ import butterknife.ButterKnife;
 @Widget(group = Group.Helper, widgetClass = QMUIStatusBarHelper.class, iconRes = R.mipmap.icon_grid_status_bar_helper)
 public class QDStatusBarHelperFragment extends BaseFragment {
 
-    @BindView(R.id.topbar) QMUITopBar mTopBar;
-    @BindView(R.id.groupListView) QMUIGroupListView mGroupListView;
+    @BindView(R.id.topbar)
+    QMUITopBarLayout mTopBar;
+    @BindView(R.id.groupListView)
+    QMUIGroupListView mGroupListView;
 
     private QDItemDescription mQDItemDescription;
 
@@ -64,7 +66,7 @@ public class QDStatusBarHelperFragment extends BaseFragment {
                 .addItemView(mGroupListView.createItemView("沉浸式状态栏"), new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intentTranslucent = TranslucentActivity.createActivity(getContext(), true);
+                        Intent intentTranslucent = new Intent(getContext(), TranslucentActivity.class);
                         startActivity(intentTranslucent);
                         getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_still);
                     }
